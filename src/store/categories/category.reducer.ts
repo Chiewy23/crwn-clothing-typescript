@@ -1,7 +1,13 @@
-import { CATEGORIES_ACTION_TYPES } from "./category.types";
+import { CATEGORIES_ACTION_TYPES, Category } from "./category.types";
 import { CategoryAction } from "./category.action";
 
-export const CATEGORIES_INITIAL_STATE = {
+export type CategoriesState = {
+    readonly categories: Category[];
+    readonly isLoading: boolean;
+    readonly error: Error | null;
+};
+
+export const CATEGORIES_INITIAL_STATE: CategoriesState = {
     categories: [],
     isLoading: false,
     error: null
