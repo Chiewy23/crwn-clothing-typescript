@@ -1,10 +1,8 @@
-import { CATEGORIES_ACTION_TYPES, Category } from "./category.types";
+import { Category } from "./category.types";
 import { AnyAction } from "redux";
 import { 
-    CategoryAction,
     fetchCategoriesStart,
     fetchCategoriesSuccess,
-    FetchCategoriesFail,
     fetchCategoriesFail
 } from "./category.action";
 
