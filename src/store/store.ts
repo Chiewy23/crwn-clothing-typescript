@@ -7,6 +7,8 @@ import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from "redux-saga";
 
+export type RootState = ReturnType<typeof rootReducer>;
+
 const persistConfig = {
     key: "root",        // persist everything
     storage: storage,   // use browser localStorage
