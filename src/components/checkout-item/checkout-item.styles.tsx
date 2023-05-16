@@ -40,18 +40,3 @@ export const RemoveButton = styled.div`
   padding-left: 12px;
   cursor: pointer;
 `;
-
-
-  // .name,
-  // .quantity,
-  // .price {
-    
-  // }
-
-  // .quantity {
-
-  // }
-
-  // .remove-button {
-  // }
-
