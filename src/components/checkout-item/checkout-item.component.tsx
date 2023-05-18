@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from "../../store/cart/cart.action";
-import { CartItem } from "../../store/cart/cart.types";
+import { CartItemExtension } from "../../store/cart/cart.types";
 import { 
     CheckoutItemContainer,
     ImageContainer,
@@ -13,7 +13,7 @@ import {
 
 
 type CheckoutItemProps = {
-    cartItem: CartItem;
+    cartItem: CartItemExtension;
 };
 
 const CheckoutItem: FC<CheckoutItemProps> = ({ cartItem }) => {

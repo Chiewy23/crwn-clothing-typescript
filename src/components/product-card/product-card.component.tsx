@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { BUTTON_TYPE_CLASSES } from "../button/button.component";
-import { CartItem } from "../../store/cart/cart.types";
+import { CartItemExtension } from "../../store/cart/cart.types";
 import { FC } from "react";
 
 import { 
@@ -13,7 +13,7 @@ import {
 } from "./product-card.styles";
 
 type ProductCardProps = {
-    product: CartItem;
+    product: CartItemExtension;
 };
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
