@@ -30,7 +30,9 @@ describe("Navigation tests", () => {
         })
 
         const signOutLinkElement = screen.getByText(/sign out/i);
-
         expect(signOutLinkElement).toBeInTheDocument();
+
+        const signInLinkElement = screen.queryByText(/sign in/i);
+        expect(signInLinkElement).toBeNull();
     });
 });
