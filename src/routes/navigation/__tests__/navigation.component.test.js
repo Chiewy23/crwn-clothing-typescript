@@ -14,8 +14,10 @@ describe("Navigation tests", () => {
         })
 
         const signInLinkElement = screen.getByText(/sign in/i);
-
         expect(signInLinkElement).toBeInTheDocument();
+
+        const signOutLinkElement = screen.queryByText(/sign out/i);
+        expect(signOutLinkElement).toBeNull();
     });
 
     test("It should render a Sign Out link if currentUser", () => {
