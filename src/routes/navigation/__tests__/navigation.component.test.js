@@ -4,7 +4,7 @@ import { renderWithProviders } from "../../../utilities/test/test.utils";
 
 
 describe("Navigation tests", () => {
-    test("It should render a Sign In link if no currentUder", () => {
+    test("It should render a Sign In link if no currentUser", () => {
         renderWithProviders(<Navigation />, {
             preloadedState: {
                 user: {
@@ -18,7 +18,7 @@ describe("Navigation tests", () => {
         expect(signInLinkElement).toBeInTheDocument();
     });
 
-    test("It should render a Sign Out link if currentUder", () => {
+    test("It should render a Sign Out link if currentUser", () => {
         renderWithProviders(<Navigation />, {
             preloadedState: {
                 user: {
