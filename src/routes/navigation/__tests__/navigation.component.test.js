@@ -37,4 +37,19 @@ describe("Navigation tests", () => {
         const signInLinkElement = screen.queryByText(/sign in/i);
         expect(signInLinkElement).toBeNull();
     });
+
+    test("it should not render a cart dropdown is isCartOpen is false", () => {
+        renderWithProviders(<Navigation />, {
+            preloadedState: {
+                cart: {
+                    isCartOpen: false,
+                    cartItems: []
+                }
+            }
+        })
+
+        const dropdownTextElement = screen.queryByText(/Your cart is empty/);
+
+        expect(dropdownTextElement).toBeNull();
+    });
 });
