@@ -93,5 +93,6 @@ describe("Navigation tests", () => {
         await fireEvent.click(signOutLinkElement);
         expect(mockedDispatch).toHaveBeenCalled();
         expect(mockedDispatch).toHaveBeenCalledWith(signOutStart());
+        mockedDispatch.mockClear();
     })
 });
