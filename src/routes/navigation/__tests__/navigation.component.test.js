@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Navigation from "../navigation.component";
 import { renderWithProviders } from "../../../utilities/test/test.utils";
+import { signOutStart } from "../../../store/user/user.action";
 
 
 const mockedDispatch = jest.fn();
@@ -91,5 +92,6 @@ describe("Navigation tests", () => {
 
         await fireEvent.click(signOutLinkElement);
         expect(mockedDispatch).toHaveBeenCalled();
+        expect(mockedDispatch).toHaveBeenCalledWith(signOutStart());
     })
 });
