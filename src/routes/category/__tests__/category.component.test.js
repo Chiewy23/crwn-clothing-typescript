@@ -21,7 +21,7 @@ describe("category tests", () => {
             }
         })
 
-        const spinnerElement = screen.findByTestId("spinner");
+        const spinnerElement = screen.getByTestId("spinner");
 
         expect(spinnerElement).toBeInTheDocument();
     });
