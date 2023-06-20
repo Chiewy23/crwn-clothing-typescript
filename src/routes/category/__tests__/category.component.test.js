@@ -40,4 +40,22 @@ describe("category tests", () => {
 
         expect(spinnerElement).toBeNull();
     });
+
+    test("it should render products if isLoading is false", () => {
+        renderWithProviders(<Category />, {
+            preloadedState: {
+                categories: {
+                    isLoading: false,
+                    categories: [{ title: 'mens', items: [
+                        { id: 1, name: "Product 1" },
+                        { id: 2, name: "Product 2" }
+                    ]}]
+                }
+            }
+        })
+
+        const product1Element = screen.getByText(/product 1/i);
+
+        expect(product1Element).toBeInTheDocument();
+    });
 });
