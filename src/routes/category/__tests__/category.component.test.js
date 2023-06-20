@@ -20,5 +20,9 @@ describe("category tests", () => {
                 }
             }
         })
+
+        const spinnerElement = screen.findByTestId("spinner");
+
+        expect(spinnerElement).toBeInTheDocument();
     });
 });
